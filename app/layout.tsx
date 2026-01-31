@@ -38,12 +38,12 @@ export default function RootLayout({
             <Link href="/" className="font-archivo text-xl md:text-2xl tracking-tighter hover:opacity-80 transition-opacity uppercase leading-none">
               THE BEST<br />PICKLEBALL STUFF
             </Link>
-            <nav className="hidden md:flex space-x-8 font-bold text-sm uppercase">
+            <nav className="flex space-x-6 md:space-x-8 font-bold text-[10px] md:text-sm uppercase tracking-widest">
               <Link href="/" className="hover:text-brand transition-colors">Gear</Link>
               <Link href="/blog" className="hover:text-brand transition-colors">Blog</Link>
             </nav>
-            <div className="flex items-center space-x-4">
-              <a href="mailto:thebestpickleballstuff@gmail.com" className="bg-black text-white px-6 py-2 font-bold text-xs uppercase hover:bg-zinc-800 transition-colors">
+            <div className="flex items-center">
+              <a href="mailto:thebestpickleballstuff@gmail.com" className="hidden sm:block bg-black text-white px-6 py-2 font-bold text-xs uppercase hover:bg-zinc-800 transition-colors">
                 Contact
               </a>
             </div>

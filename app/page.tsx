@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { CATEGORIES, GEAR_ITEMS } from "@/lib/gear";
 import AffiliateLink from "@/components/AffiliateLink";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -109,6 +110,24 @@ export default function Home() {
           );
         })}
       </div>
+
+      {/* Blog Callout */}
+      <section className="bg-brand border-t-2 border-black py-20 md:py-32">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="font-archivo text-4xl md:text-7xl uppercase tracking-tighter mb-8 leading-none">
+            Deeper<br />Insights.
+          </h2>
+          <p className="font-bold text-sm uppercase tracking-widest mb-12 max-w-md mx-auto">
+            Essays on community, performance, and why we even play this game.
+          </p>
+          <Link
+            href="/blog"
+            className="inline-block bg-black text-white px-12 py-4 font-archivo text-xl uppercase tracking-tighter hover:bg-zinc-800 transition-all hover:scale-105"
+          >
+            Read the Blog
+          </Link>
+        </div>
+      </section>
     </div>
   );
 }
