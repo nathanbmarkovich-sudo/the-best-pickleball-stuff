@@ -148,5 +148,15 @@ export const GEAR_ITEMS: GearItem[] = [
         award: "",
         link: "https://swiftnet.pro/products/swiftnet%C2%AE",
         description: "The most popular portable net for a reason. Ultra-lightweight, high-tension, and incredibly easy to set up."
+    },
+    {
+        id: "m1",
+        name: "Titan ACE Pickleball Machine",
+        category: "Ball Machines",
+        price: "$1,999.00",
+        image: "/images/titan-ace.png",
+        award: "",
+        link: "https://titanballmachines.com/products/titan-ace-pickleball-machine",
+        description: "The best pickleball machine for individual practice. Compact, powerful, and features an incredible app-based drill system."
     }
 ];
