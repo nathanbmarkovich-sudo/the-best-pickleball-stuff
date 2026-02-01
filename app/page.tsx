@@ -2,18 +2,42 @@ import Image from "next/image";
 import { CATEGORIES, GEAR_ITEMS } from "@/lib/gear";
 import AffiliateLink from "@/components/AffiliateLink";
 import Link from "next/link";
+import JsonLd from "@/components/JsonLd";
 
 export default function Home() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "The Best Pickleball Paddles of 2026",
+    "description": "Final rankings of the top pickleball paddles on the market.",
+    "itemListElement": GEAR_ITEMS.filter(i => i.category === "Paddles").map((item, index) => ({
+      "@type": "ListItem",
+      "position": index + 1,
+      "item": {
+        "@type": "Product",
+        "name": item.name,
+        "description": item.description,
+        "image": `${process.env.NEXT_PUBLIC_BASE_URL || "https://thebestpickleballstuff.com"}${item.image}`,
+        "offers": {
+          "@type": "Offer",
+          "price": item.price.replace("$", ""),
+          "priceCurrency": "USD"
+        }
+      }
+    }))
+  };
+
   return (
     <div className="flex flex-col min-h-screen">
+      <JsonLd data={jsonLd} />
       {/* Hero Section */}
       <section className="bg-white border-b border-black py-20 md:py-32">
         <div className="container mx-auto px-4 text-center">
           <h1 className="font-archivo text-5xl md:text-8xl tracking-tight uppercase mb-6 leading-[0.9]">
-            My Favorite<br />Pickleball Gear.
+            Best Pickleball<br />Gear 2026.
           </h1>
-          <p className="text-xl md:text-2xl font-medium text-zinc-500 uppercase tracking-tight">
-            Nathan's pickleball stuff leaderboard.
+          <p className="text-lg md:text-xl font-medium text-zinc-500 uppercase tracking-tight max-w-2xl mx-auto">
+            Nathan's ultimate leaderboard. Ranked and reviewed to help you find the best pickleball paddle for your game.
           </p>
         </div>
       </section>
@@ -110,6 +134,25 @@ export default function Home() {
           );
         })}
       </div>
+
+      {/* SEO Content Section */}
+      <section className="bg-zinc-50 py-20 border-b border-black">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="font-archivo text-3xl md:text-5xl uppercase tracking-tighter mb-8">
+              How to Choose the Best Pickleball Paddle
+            </h2>
+            <div className="prose prose-zinc max-w-none font-medium text-zinc-600 leading-relaxed space-y-6">
+              <p>
+                Finding the <strong>best pickleball paddle</strong> depends on your playing style, skill level, and power-to-control preference. Whether you're looking for an elongated face for extra reach or a wider body for a larger sweet spot, my leaderboard ranks the top performers based on real-world testing.
+              </p>
+              <p>
+                In 2026, the trend has shifted toward 16mm carbon fiber faces which offer unparalleled spin and vibration dampening. We also keep a close eye on the best pickleball shoes and portable nets to ensure your entire kit is optimized for high-performance play.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Blog Callout */}
       <section className="bg-brand border-t-2 border-black py-20 md:py-32">

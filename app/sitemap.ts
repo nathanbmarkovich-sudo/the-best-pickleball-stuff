@@ -1,21 +1,23 @@
 import { MetadataRoute } from "next";
 import { BASE_URL } from "@/lib/constants";
-import { GEAR_ITEMS } from "@/lib/gear";
+import { getAllPosts } from "@/lib/blog";
 
-export default function sitemap(): MetadataRoute.Sitemap {
-    const products = GEAR_ITEMS.map((product) => ({
-        url: `${BASE_URL}/gear/${product.id}`,
-        lastModified: new Date(),
-        changeFrequency: "weekly" as const,
-        priority: 0.8,
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+    const posts = await getAllPosts();
+
+    const blogPosts = posts.map((post) => ({
+        url: `${BASE_URL}/blog/${post.slug}`,
+        lastModified: new Date(post.date),
+        changeFrequency: "monthly" as const,
+        priority: 0.7,
     }));
 
-    const routes = ["", "/blog"].map((route) => ({
+    const staticRoutes = ["", "/blog"].map((route) => ({
         url: `${BASE_URL}${route}`,
         lastModified: new Date(),
         changeFrequency: "daily" as const,
         priority: 1.0,
     }));
 
-    return [...routes, ...products];
+    return [...staticRoutes, ...blogPosts];
 }

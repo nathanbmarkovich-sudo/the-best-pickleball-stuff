@@ -4,11 +4,39 @@ import { MDXRemote } from "next-mdx-remote/rsc";
 import Link from "next/link";
 import { ChevronLeft } from "lucide-react";
 
+import { BASE_URL } from "@/lib/constants";
+import { Metadata } from "next";
+
 export async function generateStaticParams() {
     const posts = await getAllPosts();
     return posts.map((post) => ({
         slug: post.slug,
     }));
+}
+
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+    const { slug } = await params;
+    const post = await getPostBySlug(slug);
+
+    if (!post) return {};
+
+    return {
+        title: post.title,
+        description: post.excerpt,
+        openGraph: {
+            title: post.title,
+            description: post.excerpt,
+            type: "article",
+            url: `${BASE_URL}/blog/${slug}`,
+            publishedTime: post.date,
+            authors: [post.author],
+        },
+        twitter: {
+            card: "summary_large_image",
+            title: post.title,
+            description: post.excerpt,
+        },
+    };
 }
 
 export default async function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {

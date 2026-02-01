@@ -2,8 +2,8 @@ import Link from "next/link";
 import { getAllPosts } from "@/lib/blog";
 
 export const metadata = {
-    title: "Blog",
-    description: "Deeper dives into the stuff you need to play better pickleball.",
+    title: "Pickleball Insights & Gear Tips",
+    description: "Deep dives into the best pickleball paddles, strategy guides, and community stories. Expert advice to help you play better and find the right gear.",
 };
 
 export default async function BlogPage() {
