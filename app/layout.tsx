@@ -3,7 +3,7 @@ import { Inter, Archivo_Black } from "next/font/google";
 import "./globals.css";
 import { SITE_NAME, SITE_TITLE, SITE_DESCRIPTION, BASE_URL } from "@/lib/constants";
 import Link from "next/link";
-import { Analytics } from "@vercel/analytics/react";
+import { Analytics } from "@vercel/analytics/next";
 
 const inter = Inter({
   variable: "--font-inter",
