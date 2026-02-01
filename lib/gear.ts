@@ -125,7 +125,7 @@ export const GEAR_ITEMS: GearItem[] = [
         price: "$Varies",
         image: "/images/franklin-x40.png",
         award: "",
-        link: "https://amazon.com/dp/B01LW8L9O3",
+        link: "https://www.amazon.com/Franklin-Sports-Outdoor-Performance-Pickleballs/dp/B074PD873C?crid=P3FT8UKGAZE0&dib=eyJ2IjoiMSJ9.rYZ8Wbg4nK_Bj0GOXk2r-ERjzuJ_6eYqQhT8J0sl1c8sKPFB61DEn79gJaI-rDzugMio_S4lOfyMRl7y28aZEMTfIKFU5ZDIYdXCAufwjfJyCLBdZHbH7ekjQ7QoiGVLw1UrvwHAvbAP0QthdCv3akMVo4aaEbDR0TgveX6bxCh4ao-ZkfiPA48Z_onmAupTSBl4QAiL1b9fjCeZr6FGLi3tu9j91-LxxEQOTZkSgoVAfwcSe83wWipQPm14s229qAdzzVogsiuoxrCBvk99E8KAsgRmbclISxXitW3xndU.VSWvQSzhsXxJ83GQrIFAxKphWr4jOnE4uEo2X2eAPaI&dib_tag=se&keywords=franklin%2Bx-40%2Bpickleball%2Bballs&qid=1769904286&sprefix=franklin%2B%2Caps%2C203&sr=8-6&th=1&linkCode=ll2&tag=bestpicklestu-20&linkId=393d90e9c7fdce5f9999deacbe4c47b7&language=en_US&ref_=as_li_ss_tl",
         discountCode: "Wait for a sale and buy in bulk on Amazon or Franklin's site",
         description: "The industry standard for outdoor tournament play. Best balance of durability and flight consistency."
     },
