@@ -3,6 +3,7 @@ import { Inter, Archivo_Black } from "next/font/google";
 import "./globals.css";
 import { SITE_NAME, SITE_TITLE, SITE_DESCRIPTION, BASE_URL } from "@/lib/constants";
 import Link from "next/link";
+import { Analytics } from "@vercel/analytics/react";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -86,6 +87,7 @@ export default function RootLayout({
         <main className="pt-20 min-h-screen">
           {children}
         </main>
+        <Analytics />
 
         <footer className="bg-black text-white py-16">
           <div className="container mx-auto px-4 text-center">
