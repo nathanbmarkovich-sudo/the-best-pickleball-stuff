@@ -137,7 +137,7 @@ export const GEAR_ITEMS: GearItem[] = [
         image: "/images/dominator-net.png",
         award: "",
         link: "https://www.dominatorhoop.com/product/max-semi-permanent-portable-pickleball-net/",
-        description: "The gold standard for portable nets. Heavy-duty aluminum frame, locking wheels, and professional-grade tensioning for a true-to-court experience."
+        description: "The gold standard for semi-permanent nets. Heavy-duty aluminum frame, locking wheels, and professional-grade tensioning for a true-to-court experience."
     },
     {
         id: "n2",
@@ -156,7 +156,7 @@ export const GEAR_ITEMS: GearItem[] = [
         price: "$1,999.00",
         image: "/images/titan-ace.png",
         award: "",
-        link: "https://titanballmachines.com/products/titan-ace-pickleball-machine",
+        link: "https://amzn.to/4roargX",
         description: "The best pickleball machine for individual practice. Compact, powerful, and features an incredible app-based drill system."
     }
 ];
