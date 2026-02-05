@@ -158,5 +158,15 @@ export const GEAR_ITEMS: GearItem[] = [
         award: "",
         link: "https://amzn.to/4roargX",
         description: "The best pickleball machine for individual practice. Compact, powerful, and features an incredible app-based drill system."
+    },
+    {
+        id: "i1",
+        name: "Venom 2 Back by Hyperice",
+        category: "Injury Reduction",
+        price: "$229",
+        image: "/images/hypericevenom2.png",
+        award: "",
+        link: "https://www.awin1.com/cread.php?awinmid=25761&awinaffid=2754258&ued=https%3A%2F%2Fhyperice.com%2Fproducts%2Fvenom-2-back%2F",
+        description: "A game-changer for lower back health. The Venom 2 Back combines advanced heat and vibration to loosen tight muscles before play and accelerate recovery afterwards, significantly reducing low back pain and stiffness."
     }
 ];
